@@ -1,0 +1,166 @@
+.elementor-13 .elementor-element.elementor-element-7da9e80d{--display:flex;border-style:none;--border-style:none;--border-radius:30px 30px 30px 30px;box-shadow:-2px 0px 47px 0px rgba(122.39999999999999, 122.39999999999999, 122.39999999999999, 0.37);--padding-top:40px;--padding-bottom:40px;--padding-left:40px;--padding-right:40px;}.elementor-13 .elementor-element.elementor-element-7da9e80d:not(.elementor-motion-effects-element-type-background), .elementor-13 .elementor-element.elementor-element-7da9e80d > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-color:#FFFFFF;}.elementor-13 .elementor-element.elementor-element-f64aeaa{--display:flex;}/* Start custom CSS for container, class: .elementor-element-7da9e80d *//* =========================================
+   1. MASTER LAYOUT & COMPATIBILITY
+   ========================================= */
+@media (min-width: 768px) {
+    .elementor-13 .elementor-element.elementor-element-7da9e80d .woocommerce {
+        display: flex !important;
+        gap: 30px !important;
+        align-items: flex-start !important; 
+    }
+    .elementor-13 .elementor-element.elementor-element-7da9e80d .woocommerce-MyAccount-navigation {
+        width: 30% !important; 
+        min-width: 230px !important; /* Sturdier width for icons */
+        border-right: 2px solid #f0f0f0 !important; 
+        padding-right: 20px !important;
+    }
+    .elementor-13 .elementor-element.elementor-element-7da9e80d .woocommerce-MyAccount-content {
+        width: 70% !important;
+    }
+}
+
+/* Clear theme junk from list */
+.elementor-13 .elementor-element.elementor-element-7da9e80d .woocommerce-MyAccount-navigation ul,
+.elementor-13 .elementor-element.elementor-element-7da9e80d .woocommerce-MyAccount-navigation ul li {
+        list-style: none !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        border: none !important; 
+}
+
+/* =========================================
+   2. BUTTON STYLE WITH ICON LAYOUT
+   ========================================= */
+.elementor-13 .elementor-element.elementor-element-7da9e80d .woocommerce-MyAccount-navigation ul li a {
+        text-decoration: none !important;
+        color: #1a1a1a !important;
+        font-weight: 600 !important;
+        display: flex !important; /* Flex allows icon and text to align perfectly */
+        align-items: center !important;
+        padding: 14px 20px 14px 15px !important; /* Adjust padding for icon space */
+        margin-bottom: 8px !important;
+        border-radius: 8px !important;
+        border: none !important; 
+        white-space: nowrap !important;
+        transition: all 0.3s ease !important;
+}
+
+/* =========================================
+   3. THE GLOBAL ICON SETUP (::before)
+   ========================================= */
+/* This part builds the "container" for the icon before the text */
+.elementor-13 .elementor-element.elementor-element-7da9e80d .woocommerce-MyAccount-navigation ul li a::before {
+    font-family: "Font Awesome 5 Free" !important; /* Uses standard WP icons */
+    font-weight: 900 !important; /* Required for solid icons */
+    margin-right: 15px !important; /* Space between icon and text */
+    width: 25px !important; /* Fixed width for alignment */
+    text-align: center !important;
+    font-size: 1.1em !important;
+    opacity: 0.6 !important; /* Faded icons when inactive, matching AI image */
+    transition: all 0.3s ease !important;
+}
+
+/* Turn icons bright and white on active/hover */
+.elementor-13 .elementor-element.elementor-element-7da9e80d .woocommerce-MyAccount-navigation ul li.is-active a::before,
+.elementor-13 .elementor-element.elementor-element-7da9e80d .woocommerce-MyAccount-navigation ul li a:hover::before {
+    opacity: 1 !important;
+    color: #ffffff !important;
+}
+
+/* Active and Hover Red State */
+.elementor-13 .elementor-element.elementor-element-7da9e80d .woocommerce-MyAccount-navigation ul li.is-active a,
+.elementor-13 .elementor-element.elementor-element-7da9e80d .woocommerce-MyAccount-navigation ul li a:hover {
+        background-color: #ff4a5a !important; 
+        color: #ffffff !important;
+}
+
+
+/* =========================================
+   4. INJECTING THE SPECIFIC ICONS
+   (Unicode from Font Awesome 5 Free Solid)
+   Targeting the specific menu item classes from your screenshot.
+   ========================================= */
+
+/* 1. Home */
+.elementor-13 .elementor-element.elementor-element-7da9e80d .woocommerce-MyAccount-navigation-link--dashboard a::before { content: "/f015" !important; }
+
+/* 2. Shop */
+.elementor-13 .elementor-element.elementor-element-7da9e80d .woocommerce-MyAccount-navigation-link--shop a::before { content: "/f07a" !important; }
+
+/* 3. Dashboard */
+.elementor-13 .elementor-element.elementor-element-7da9e80d .woocommerce-MyAccount-navigation-link--home a::before { content: "/f3fd" !important; }
+
+/* 4. Orders */
+.elementor-13 .elementor-element.elementor-element-7da9e80d .woocommerce-MyAccount-navigation-link--orders a::before { content: "/f466" !important; }
+
+/* 5. Downloads */
+.elementor-13 .elementor-element.elementor-element-7da9e80d .woocommerce-MyAccount-navigation-link--downloads a::before { content: "/f019" !important; }
+
+/* 6. Edit-Address */
+.elementor-13 .elementor-element.elementor-element-7da9e80d .woocommerce-MyAccount-navigation-link--edit-address a::before { content: "/f3c5" !important; }
+
+/* 7. Edit-Account */
+.elementor-13 .elementor-element.elementor-element-7da9e80d .woocommerce-MyAccount-navigation-link--edit-account a::before { content: "/f007" !important; }
+
+/* 9. Wishlist */
+.elementor-13 .elementor-element.elementor-element-7da9e80d .woocommerce-MyAccount-navigation-link--wishlist a::before { content: "/f004" !important; }
+
+/* 8. Logout */
+.elementor-13 .elementor-element.elementor-element-7da9e80d .woocommerce-MyAccount-navigation-link--customer-logout a::before { content: "/f2f5" !important; }
+
+
+
+/* =========================================
+   5. LOGGED-OUT LOGIN FORM FIX
+   ========================================= */
+
+/* Turn off the split layout if a login form is present */
+.elementor-13 .elementor-element.elementor-element-7da9e80d .woocommerce:has(.login),
+.elementor-13 .elementor-element.elementor-element-7da9e80d .woocommerce:has(#customer_login) {
+    display: block !important; 
+}
+
+/* Center the login form beautifully inside the white card */
+.elementor-13 .elementor-element.elementor-element-7da9e80d .woocommerce .login,
+.elementor-13 .elementor-element.elementor-element-7da9e80d .woocommerce #customer_login {
+    max-width: 450px !important;
+    margin: 0 auto !important;
+    width: 100% !important;
+    padding: 20px 0 !important;
+}
+
+/* Fix the squished text boxes */
+.elementor-13 .elementor-element.elementor-element-7da9e80d .woocommerce form.login input.input-text {
+    width: 100% !important;
+    padding: 12px 15px !important;
+    min-height: 45px !important;
+    border-radius: 6px !important;
+    border: 1px solid #ddd !important;
+}
+
+/* Make the Login button full-width and centered */
+.elementor-13 .elementor-element.elementor-element-7da9e80d .woocommerce form.login .woocommerce-form-login__submit {
+    width: 100% !important;
+    margin-top: 15px !important;
+}
+
+
+
+
+/* =========================================
+   6. STRIP THEME'S DUPLICATE LOGIN BOX
+   ========================================= */
+
+/* Remove the inner box background and shadow */
+.elementor-13 .elementor-element.elementor-element-7da9e80d .woocommerce form.login,
+.elementor-13 .elementor-element.elementor-element-7da9e80d .woocommerce form.register {
+    background-color: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
+    padding: 20px 0 0 0 !important; 
+    margin-top: 20px !important; /* Pushes the form down away from the top tab */
+}
+
+/* Ensure the inputs have room to breathe */
+.elementor-13 .elementor-element.elementor-element-7da9e80d .woocommerce form.login p {
+    margin-bottom: 20px !important;
+}/* End custom CSS */

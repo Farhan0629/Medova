@@ -1,0 +1,7 @@
+# Environment and OS files
+.DS_Store
+Thumbs.db
+*.log
+_asset_map.json
+__pycache__/
+*.pyc
