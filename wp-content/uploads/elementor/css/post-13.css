@@ -81,31 +81,31 @@
    ========================================= */
 
 /* 1. Home */
-.elementor-13 .elementor-element.elementor-element-7da9e80d .woocommerce-MyAccount-navigation-link--dashboard a::before { content: "/f015" !important; }
+.elementor-13 .elementor-element.elementor-element-7da9e80d .woocommerce-MyAccount-navigation-link--dashboard a::before { content:"\f015" !important; }
 
 /* 2. Shop */
-.elementor-13 .elementor-element.elementor-element-7da9e80d .woocommerce-MyAccount-navigation-link--shop a::before { content: "/f07a" !important; }
+.elementor-13 .elementor-element.elementor-element-7da9e80d .woocommerce-MyAccount-navigation-link--shop a::before { content:"\f07a" !important; }
 
 /* 3. Dashboard */
-.elementor-13 .elementor-element.elementor-element-7da9e80d .woocommerce-MyAccount-navigation-link--home a::before { content: "/f3fd" !important; }
+.elementor-13 .elementor-element.elementor-element-7da9e80d .woocommerce-MyAccount-navigation-link--home a::before { content:"\f3fd" !important; }
 
 /* 4. Orders */
-.elementor-13 .elementor-element.elementor-element-7da9e80d .woocommerce-MyAccount-navigation-link--orders a::before { content: "/f466" !important; }
+.elementor-13 .elementor-element.elementor-element-7da9e80d .woocommerce-MyAccount-navigation-link--orders a::before { content:"\f466" !important; }
 
 /* 5. Downloads */
-.elementor-13 .elementor-element.elementor-element-7da9e80d .woocommerce-MyAccount-navigation-link--downloads a::before { content: "/f019" !important; }
+.elementor-13 .elementor-element.elementor-element-7da9e80d .woocommerce-MyAccount-navigation-link--downloads a::before { content:"\f019" !important; }
 
 /* 6. Edit-Address */
-.elementor-13 .elementor-element.elementor-element-7da9e80d .woocommerce-MyAccount-navigation-link--edit-address a::before { content: "/f3c5" !important; }
+.elementor-13 .elementor-element.elementor-element-7da9e80d .woocommerce-MyAccount-navigation-link--edit-address a::before { content:"\f3c5" !important; }
 
 /* 7. Edit-Account */
-.elementor-13 .elementor-element.elementor-element-7da9e80d .woocommerce-MyAccount-navigation-link--edit-account a::before { content: "/f007" !important; }
+.elementor-13 .elementor-element.elementor-element-7da9e80d .woocommerce-MyAccount-navigation-link--edit-account a::before { content:"\f007" !important; }
 
 /* 9. Wishlist */
-.elementor-13 .elementor-element.elementor-element-7da9e80d .woocommerce-MyAccount-navigation-link--wishlist a::before { content: "/f004" !important; }
+.elementor-13 .elementor-element.elementor-element-7da9e80d .woocommerce-MyAccount-navigation-link--wishlist a::before { content:"\f004" !important; }
 
 /* 8. Logout */
-.elementor-13 .elementor-element.elementor-element-7da9e80d .woocommerce-MyAccount-navigation-link--customer-logout a::before { content: "/f2f5" !important; }
+.elementor-13 .elementor-element.elementor-element-7da9e80d .woocommerce-MyAccount-navigation-link--customer-logout a::before { content:"\f2f5" !important; }
 
 
 

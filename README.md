@@ -11,9 +11,10 @@ A picture-perfect static mirror clone of the **Medova** (Healthletic Lifestyle) 
 ## Features
 
 - **Pixel-Perfect Visual Fidelity:** Retains all Elementor typography, animations, Swiper sliders, Magnific popup lightboxes, sticky headers, responsive menus, and custom styling.
-- **Self-Contained Local Assets:** All 880+ assets (images, CSS stylesheets, JavaScript files, fonts, and icons) are hosted directly within the repository under /wp-content/ and /_external/.
-- **Zero Original Hotlinking:** All original domain hotlinks rewritten to relative static paths compatible with root and subpath GitHub Pages deployment (/Medova/).
-- **Complete Page Inventory:** 60+ pages cloned, including all core clinic pages, meals & cloud kitchen menus, specialized service pages, WooCommerce shop & account flows, and full blog posts.
+- **Self-Contained Local Assets:** 1,200+ local assets (620+ images, 146 CSS stylesheets, 147 JavaScript files, 100+ self-hosted webfonts, and SVGs) hosted directly within the repository under /wp-content/.
+- **Zero Original Hotlinking:** All original domain hotlinks rewritten to relative static paths compatible with local hosting and GitHub Pages deployment.
+- **Complete Page Inventory:** 220 pages cloned (100% of the live website), including all core clinic pages, meals & cloud kitchen menus, specialized service pages, WooCommerce shop & 120+ individual product pages, membership flows, and full blog posts.
+- **Self-Hosted High-Fidelity Fonts:** All Google Fonts (Outfit, Saira, Inter, Roboto, Roboto Slab) and Font Awesome 6 Pro icons are fully downloaded and bundled locally for offline rendering without CORS or CDN latency issues.
 
 ---
 

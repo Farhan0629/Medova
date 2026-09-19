@@ -261,7 +261,7 @@
     height: 48px;
     line-height: 48px;
     text-align: center;
-    content: "/e918";
+    content:"\e918";
     font-size: 20px;
     font-family: "woosw";
     speak: none;
@@ -353,7 +353,7 @@ body.rtl .woosw-popup .woosw-popup-inner .woosw-popup-content .woosw-popup-conte
 
 .woosw-items .woosw-item .woosw-item--remove span:before, .woosw-items .woosw-item .woosw-item--add span:before {
     display: inline-block;
-    content: "/e918";
+    content:"\e918";
     font-size: 16px;
     font-family: "woosw";
     speak: none;
@@ -370,7 +370,7 @@ body.rtl .woosw-popup .woosw-popup-inner .woosw-popup-content .woosw-popup-conte
 }
 
 .woosw-items .woosw-item .woosw-item--remove span.woosw-item--removing:before, .woosw-items .woosw-item .woosw-item--remove span.woosw-item--adding:before, .woosw-items .woosw-item .woosw-item--add span.woosw-item--removing:before, .woosw-items .woosw-item .woosw-item--add span.woosw-item--adding:before {
-    content: "/e913";
+    content:"\e913";
     animation: woosw-spinner 1s linear infinite;
     -webkit-animation: woosw-spinner 1s linear infinite;
 }
@@ -655,23 +655,23 @@ body.rtl .woosw-list .woosw-share .woosw-share-label, body.rtl .woosw-list .woos
 }
 
 .woosw-share-facebook .woosw-icon:before {
-    content: "/e919";
+    content:"\e919";
 }
 
 .woosw-share-twitter .woosw-icon:before {
-    content: "/e91d";
+    content:"\e91d";
 }
 
 .woosw-share-pinterest .woosw-icon:before {
-    content: "/e91c";
+    content:"\e91c";
 }
 
 .woosw-share-instagram .woosw-icon:before {
-    content: "/e91a";
+    content:"\e91a";
 }
 
 .woosw-share-mail .woosw-icon:before {
-    content: "/e91b";
+    content:"\e91b";
 }
 
 @media only screen and (max-width: 860px) {

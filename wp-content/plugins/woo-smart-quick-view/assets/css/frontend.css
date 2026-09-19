@@ -245,7 +245,7 @@
 }
 
 .woosq-product .thumbnails .slick-arrow.slick-prev:before {
-    content: '/e929';
+    content:'\e929';
 }
 
 .woosq-product .thumbnails .slick-arrow.slick-next {
@@ -253,7 +253,7 @@
 }
 
 .woosq-product .thumbnails .slick-arrow.slick-next:before {
-    content: '/e92a';
+    content:'\e92a';
 }
 
 .woosq-product > .product .summary {
@@ -367,7 +367,7 @@
 }
 
 .view-details-btn:after {
-    content: '/e90f';
+    content:'\e90f';
     font-family: "feather";
     margin-left: 10px;
 }
@@ -489,7 +489,7 @@ body.rtl .mfp-woosq .mfp-close {
     height: 30px;
     line-height: 30px;
     text-align: center;
-    content: '/e9ea';
+    content:'\e9ea';
     font-family: "feather";
     display: inline-block;
     font-size: 24px;
@@ -518,7 +518,7 @@ body.rtl .mfp-woosq .mfp-close {
 }
 
 .mfp-woosq .mfp-preloader:before {
-    content: '/e9a7';
+    content:'\e9a7';
     font-family: "feather";
     display: inline-block;
     font-size: 24px;
@@ -591,11 +591,11 @@ body.rtl .mfp-woosq .mfp-close {
 }
 
 .mfp-woosq .mfp-arrow.mfp-arrow-left:before {
-    content: '/e90e';
+    content:'\e90e';
 }
 
 .mfp-woosq .mfp-arrow.mfp-arrow-right:before {
-    content: '/e90f';
+    content:'\e90f';
 }
 
 /*
