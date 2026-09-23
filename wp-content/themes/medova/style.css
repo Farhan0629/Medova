@@ -30,3 +30,5 @@ Use it to make something cool, have fun, and share what you've learned with othe
 .filter-item.hidden {
     display: none;
 }
+
+@import url("./assets/css/color.schemes.css");

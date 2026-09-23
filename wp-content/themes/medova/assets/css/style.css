@@ -33135,3 +33135,7 @@ span.select2-selection.select2-selection--single:focus {
   z-index: 1 !important;
   display: block !important;
 }
+
+/* Load Master Responsive Stylesheet */
+@import url("./color.schemes.css");
+

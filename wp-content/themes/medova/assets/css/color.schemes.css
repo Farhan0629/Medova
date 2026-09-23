@@ -1,0 +1,1155 @@
+/* ==========================================================================
+   MEDOVA / HEALTHLETIC - MASTER RESPONSIVE SYSTEM
+   Comprehensive Cross-Device Styling: Mobile (320px-480px), Phablet (481px-767px),
+   Tablet (768px-1024px), Laptop (1025px-1280px) & Desktop (1281px+)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. GLOBAL RESET & VIEWPORT OVERFLOW-X CONTAINMENT
+   -------------------------------------------------------------------------- */
+html, body {
+  overflow-x: hidden !important;
+  max-width: 100vw !important;
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  -webkit-text-size-adjust: 100% !important;
+  box-sizing: border-box !important;
+  position: relative !important;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit !important;
+}
+
+img, video, iframe, svg, canvas {
+  max-width: 100% !important;
+  height: auto;
+}
+
+/* Prevent fixed-width overflows from absolute decorative shapes */
+.shape-mockup,
+[class*="hero_shape_"],
+.jump-reverse,
+.jump,
+.moving,
+.ripple-animation,
+.choose-shape {
+  pointer-events: none !important;
+  max-width: 100% !important;
+}
+
+@media (max-width: 991px) {
+  .shape-mockup,
+  [class*="hero_shape_"],
+  .choose-shape {
+    display: none !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   2. ELEMENTOR GLOBAL CONTAINERS & FLUID GRIDS
+   -------------------------------------------------------------------------- */
+.elementor,
+.elementor-section,
+.elementor-container,
+.e-con,
+.e-con-inner,
+.e-con-full,
+.e-con-boxed,
+.e-flex {
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+@media (max-width: 1024px) {
+  /* Convert horizontal multi-column flex containers to responsive vertical stacks */
+  html body .elementor-element.e-con-full.e-flex,
+  html body .elementor-element.e-con.e-flex,
+  html body .elementor-element.e-con-boxed > .e-con-inner {
+    flex-direction: column !important;
+  }
+
+  /* Reset fixed-percentage desktop widths */
+  html body .elementor-element.e-child,
+  html body .elementor-widget__width-initial,
+  html body .elementor-widget-tablet__width-inherit,
+  html body .elementor-widget-mobile__width-inherit {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    flex: 0 0 100% !important;
+  }
+
+  /* Scale excessive desktop section paddings */
+  html body .elementor-element[data-element_type="container"] {
+    --padding-top: 50px !important;
+    --padding-bottom: 50px !important;
+    --padding-left: 16px !important;
+    --padding-right: 16px !important;
+    padding-top: 50px !important;
+    padding-bottom: 50px !important;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+}
+
+@media (max-width: 767px) {
+  html body .elementor-element[data-element_type="container"] {
+    --padding-top: 36px !important;
+    --padding-bottom: 36px !important;
+    --padding-left: 14px !important;
+    --padding-right: 14px !important;
+    padding-top: 36px !important;
+    padding-bottom: 36px !important;
+    padding-left: 14px !important;
+    padding-right: 14px !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   3. UNIFIED RESPONSIVE HEADER & MOBILE NAVIGATION
+   -------------------------------------------------------------------------- */
+/* Desktop Header Refinements */
+@media (min-width: 1025px) {
+  .elementor-element-0140c0f,
+  .elementor-element-a3d0577 {
+    width: calc(100% - 40px) !important;
+    max-width: 1440px !important;
+    margin: 15px auto !important;
+    left: 0 !important;
+    right: 0 !important;
+  }
+  .wpr-mobile-nav-menu-container {
+    display: none !important;
+  }
+}
+
+/* Mobile & Tablet Header (< 1024px) */
+@media (max-width: 1024px) {
+  header,
+  .header,
+  .site-header,
+  .elementor-7728,
+  .elementor-7686,
+  .elementor-element-0140c0f,
+  .elementor-element-a3d0577 {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 99999 !important;
+    border-radius: 0 !important;
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.08) !important;
+    background: #ffffff !important;
+    overflow: visible !important;
+  }
+
+  /* Header container flex row on mobile */
+  html body .elementor-element-0140c0f,
+  html body .elementor-element-a3d0577 {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    padding: 10px 16px !important;
+    gap: 10px !important;
+    min-height: 64px !important;
+    position: relative !important;
+  }
+
+  /* Left child: Logo container */
+  html body .elementor-element-45b4997,
+  html body .elementor-element-d506bdc {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    width: auto !important;
+    max-width: 50% !important;
+    flex: 0 0 auto !important;
+    border-bottom: none !important;
+    border-style: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* Logo Image */
+  html body .elementor-element-ff1de9a,
+  html body .elementor-element-85ab11e,
+  html body .header-logo,
+  html body .mobile-logo {
+    width: auto !important;
+    max-width: 150px !important;
+    flex: 0 0 auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+  }
+  html body .elementor-element-ff1de9a img,
+  html body .elementor-element-85ab11e img,
+  html body .header-logo img,
+  html body .mobile-logo img {
+    height: 42px !important;
+    width: auto !important;
+    max-width: 140px !important;
+    object-fit: contain !important;
+    display: block !important;
+    margin: 0 !important;
+  }
+
+  /* Hide bulky desktop contact icon boxes on mobile & tablets */
+  html body .elementor-element-7f6fac1,
+  html body .elementor-element-9134676,
+  html body .elementor-element-494245c {
+    display: none !important;
+  }
+
+  /* Middle child: Search & Cart */
+  html body .elementor-element-ed92e07,
+  html body .elementor-element-379b08d {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+    width: auto !important;
+    flex: 1 1 auto !important;
+    margin: 0 0 0 auto !important;
+    padding: 0 !important;
+    gap: 12px !important;
+  }
+
+  /* Compact Search Widget on Mobile */
+  html body .elementor-element-45f9ce0,
+  html body .elementor-element-261bdbf {
+    display: none !important;
+  }
+  html body .elementor-element-1fe45ef,
+  html body .elementor-element-e8c61c1 {
+    position: static !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 18px !important;
+    color: #111b55 !important;
+    width: 38px !important;
+    height: 38px !important;
+    border-radius: 8px !important;
+    background: #F2F3FC !important;
+    cursor: pointer !important;
+  }
+  html body .elementor-element-1fe45ef .elementor-icon,
+  html body .elementor-element-e8c61c1 .elementor-icon {
+    font-size: 16px !important;
+    color: #111b55 !important;
+  }
+
+  /* Mini Cart icon */
+  html body .elementor-element-9ad9604,
+  html body .elementor-element-d93aae2 {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  html body .wpr-mini-cart-toggle-btn {
+    padding: 6px 8px !important;
+    background: transparent !important;
+    display: flex !important;
+    align-items: center !important;
+  }
+  html body .wpr-mini-cart-btn-icon {
+    font-size: 22px !important;
+    color: #111b55 !important;
+    position: relative !important;
+    display: inline-block !important;
+  }
+  html body .wpr-mini-cart-btn-icon svg {
+    width: 22px !important;
+    height: 22px !important;
+    fill: #111b55 !important;
+  }
+  html body .wpr-mini-cart-icon-count {
+    font-size: 11px !important;
+    width: 17px !important;
+    height: 17px !important;
+    line-height: 17px !important;
+    background-color: #FF4B60 !important;
+    color: #ffffff !important;
+    border-radius: 50% !important;
+    position: absolute !important;
+    top: -6px !important;
+    right: -8px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  /* Nav menu container & Login row */
+  html body .elementor-element-3360202,
+  html body .elementor-element-da5adf9 {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+    width: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    gap: 8px !important;
+    flex: 0 0 auto !important;
+  }
+
+  /* Hide Desktop Menu */
+  html body .wpr-nav-menu-container.wpr-nav-menu-horizontal,
+  html body .main-menu.d-lg-inline-block,
+  html body nav.main-menu {
+    display: none !important;
+  }
+
+  /* Mobile Nav Menu Widget Container */
+  html body .elementor-element-406f6a0,
+  html body .elementor-element-4309519,
+  html body .elementor-widget-wpr-nav-menu {
+    width: auto !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    position: static !important;
+  }
+
+  /* Mobile Toggle (Hamburger Button) */
+  html body .wpr-mobile-nav-menu-container {
+    display: block !important;
+    position: static !important;
+  }
+  html body .wpr-mobile-toggle-wrap {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    cursor: pointer !important;
+  }
+  html body .wpr-mobile-toggle {
+    width: 42px !important;
+    height: 42px !important;
+    border-radius: 10px !important;
+    background: #F2F3FC !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 8px !important;
+    border: 1px solid #e2e6f4 !important;
+    cursor: pointer !important;
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  }
+  html body .wpr-mobile-toggle:hover,
+  html body .wpr-mobile-toggle.active {
+    background: #FF4B60 !important;
+    border-color: #FF4B60 !important;
+  }
+  html body .wpr-mobile-toggle:hover .wpr-mobile-toggle-line,
+  html body .wpr-mobile-toggle.active .wpr-mobile-toggle-line {
+    background-color: #ffffff !important;
+  }
+  html body .wpr-mobile-toggle-line {
+    width: 22px !important;
+    height: 2.5px !important;
+    background-color: #111b55 !important;
+    margin: 2px 0 !important;
+    border-radius: 2px !important;
+    transition: all 0.25s ease !important;
+  }
+
+  /* Mobile Dropdown Menu Drawer (Full-Width Responsive Overlay) */
+  html body .wpr-mobile-nav-menu {
+    display: none;
+    position: absolute !important;
+    top: 100% !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    max-height: calc(100vh - 75px) !important;
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    background: #ffffff !important;
+    padding: 12px 18px 25px !important;
+    box-shadow: 0 20px 45px rgba(17, 27, 85, 0.18) !important;
+    border-radius: 0 0 20px 20px !important;
+    border-top: 2px solid #FF4B60 !important;
+    z-index: 999999 !important;
+    margin: 0 !important;
+    list-style: none !important;
+  }
+  html body .wpr-mobile-nav-menu.wpr-active-menu,
+  html body .wpr-mobile-nav-menu.open,
+  html body .wpr-mobile-nav-menu.show {
+    display: block !important;
+    animation: medovaSlideDown 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards !important;
+  }
+  html body .wpr-mobile-nav-menu li {
+    display: block !important;
+    width: 100% !important;
+    margin: 0 !important;
+    background: transparent !important;
+    list-style: none !important;
+  }
+  html body .wpr-mobile-nav-menu li a {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    padding: 12px 14px !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    color: #111b55 !important;
+    text-decoration: none !important;
+    border-bottom: 1px solid #f0f1f8 !important;
+    border-radius: 8px !important;
+    transition: all 0.2s ease !important;
+  }
+  html body .wpr-mobile-nav-menu li a:hover,
+  html body .wpr-mobile-nav-menu li a.wpr-active-menu-item {
+    color: #FF4B60 !important;
+    background-color: #FFF2F4 !important;
+  }
+  /* Submenu in mobile dropdown */
+  html body .wpr-mobile-nav-menu .sub-menu {
+    display: none;
+    padding: 4px 0 6px 14px !important;
+    background: #F7F8FC !important;
+    border-radius: 10px !important;
+    margin: 6px 0 8px !important;
+    list-style: none !important;
+    border-left: 3px solid #FF4B60 !important;
+  }
+  html body .wpr-mobile-nav-menu .sub-menu.open,
+  html body .wpr-mobile-nav-menu .sub-menu.show {
+    display: block !important;
+  }
+  html body .wpr-mobile-nav-menu .sub-menu li a {
+    font-size: 14.5px !important;
+    font-weight: 500 !important;
+    padding: 9px 12px !important;
+    color: #4f536e !important;
+    border-bottom: 1px dashed #e4e7f3 !important;
+  }
+
+  /* Login Button on Mobile */
+  html body .elementor-element-eaaccc8,
+  html body .elementor-element-da5adf9 {
+    width: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: inline-flex !important;
+  }
+  html body .elementor-element-629b775,
+  html body .elementor-element-4b4a03a,
+  html body .elementor-element-846ad62 {
+    width: auto !important;
+    max-width: none !important;
+    top: 0 !important;
+    left: 0 !important;
+    position: static !important;
+    display: inline-flex !important;
+  }
+  html body .elementor-element-629b775 .elementor-button,
+  html body .elementor-element-4b4a03a .elementor-button,
+  html body .elementor-element-846ad62 .elementor-button {
+    padding: 8px 16px !important;
+    font-size: 13px !important;
+    font-weight: 600 !important;
+    border-radius: 30px !important;
+    box-shadow: none !important;
+    min-height: 38px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  /* Theme Header (`.th-header`) Mobile Enhancements */
+  .th-header .menu-area {
+    padding: 10px 16px !important;
+  }
+  .th-header .header-logo img {
+    height: 42px !important;
+    width: auto !important;
+    max-width: 140px !important;
+  }
+  .th-menu-toggle {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 42px !important;
+    height: 42px !important;
+    border-radius: 10px !important;
+    background: #F2F3FC !important;
+    border: 1px solid #e0e4f5 !important;
+    color: #111b55 !important;
+    font-size: 20px !important;
+    cursor: pointer !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   4. HERO SECTIONS & SLIDERS RESPONSIVENESS
+   -------------------------------------------------------------------------- */
+@media (max-width: 991px) {
+  .th-hero-wrapper,
+  .hero-1,
+  #hero {
+    padding: 30px 14px 45px !important;
+    min-height: auto !important;
+  }
+  .hero-inner {
+    padding: 15px 0 !important;
+  }
+  .hero-style1 {
+    text-align: center !important;
+    margin-bottom: 25px !important;
+  }
+  .hero-style1 .sub-title {
+    font-size: 13.5px !important;
+    margin-bottom: 10px !important;
+    display: inline-block !important;
+  }
+  .hero-style1 .hero-title,
+  .hero-title,
+  h1.hero-title {
+    font-size: clamp(24px, 6.5vw, 40px) !important;
+    line-height: 1.25 !important;
+    margin-bottom: 20px !important;
+    text-align: center !important;
+    word-break: break-word !important;
+  }
+  .hero-image {
+    text-align: center !important;
+    margin: 0 auto !important;
+    max-width: 380px !important;
+  }
+  .hero-image img {
+    max-width: 100% !important;
+    height: auto !important;
+    max-height: 320px !important;
+    object-fit: contain !important;
+    margin: 0 auto !important;
+    display: block !important;
+  }
+  .th-hero-wrapper .btn-group {
+    justify-content: center !important;
+    gap: 12px !important;
+    margin-top: 15px !important;
+  }
+  .th-hero-wrapper .social-links,
+  .th-hero-wrapper .scroll-down {
+    display: none !important;
+  }
+}
+
+@media (max-width: 575px) {
+  .th-hero-wrapper .btn-group {
+    flex-direction: column !important;
+    width: 100% !important;
+    align-items: stretch !important;
+  }
+  .th-hero-wrapper .btn-group .th-btn {
+    width: 100% !important;
+    text-align: center !important;
+    justify-content: center !important;
+    padding: 13px 18px !important;
+    font-size: 14.5px !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   5. MEAL GRID & CLOUD KITCHEN (100% FLUID RESPONSIVE)
+   -------------------------------------------------------------------------- */
+/* Mobile: 1-column */
+@media (max-width: 767px) {
+  html body .elementor-element.elementor-element-cdd234d > .e-con-inner,
+  html body .elementor-element-cdd234d > .e-con-inner,
+  html body .meal-grid > .e-con-inner,
+  html body .meal-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 10px !important;
+    box-sizing: border-box !important;
+  }
+  html body .elementor-element.elementor-element-cdd234d > .e-con-inner > .e-child,
+  html body .elementor-element-cdd234d > .e-con-inner > .e-child,
+  html body .elementor-element-cdd234d > .e-con-inner > .e-child > .e-child,
+  html body .meal-grid .e-child {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    margin: 0 auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+  html body .elementor-element.elementor-element-cdd234d .elementor-widget-image,
+  html body .elementor-element-cdd234d .elementor-widget-image,
+  html body .meal-grid .elementor-widget-image {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 210px !important;
+    border-radius: 18px !important;
+    overflow: hidden !important;
+  }
+  html body .elementor-element.elementor-element-cdd234d .elementor-widget-image img,
+  html body .elementor-element-cdd234d .elementor-widget-image img,
+  html body .meal-grid .elementor-widget-image img {
+    width: 100% !important;
+    height: 210px !important;
+    object-fit: cover !important;
+    border-radius: 18px !important;
+  }
+  html body .elementor-element.elementor-element-cdd234d .elementor-button,
+  html body .elementor-element-cdd234d .elementor-button,
+  html body .meal-grid .elementor-button {
+    width: 100% !important;
+    text-align: center !important;
+    justify-content: center !important;
+    padding: 12px 20px !important;
+  }
+}
+
+/* Tablet: 2-column */
+@media (min-width: 768px) and (max-width: 1024px) {
+  html body .elementor-element.elementor-element-cdd234d > .e-con-inner,
+  html body .elementor-element-cdd234d > .e-con-inner,
+  html body .meal-grid > .e-con-inner {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 28px !important;
+    width: 100% !important;
+  }
+  html body .elementor-element.elementor-element-cdd234d > .e-con-inner > .e-child,
+  html body .elementor-element-cdd234d > .e-con-inner > .e-child,
+  html body .meal-grid .e-child {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+  }
+  html body .elementor-element.elementor-element-cdd234d .elementor-widget-image,
+  html body .elementor-element-cdd234d .elementor-widget-image img,
+  html body .meal-grid .elementor-widget-image,
+  html body .meal-grid .elementor-widget-image img {
+    width: 100% !important;
+    height: 230px !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   6. WOOCOMMERCE PRODUCT GRIDS & SHOP RESPONSIVENESS
+   -------------------------------------------------------------------------- */
+@media (max-width: 575px) {
+  html body .woocommerce.columns-3 .row.gy-40,
+  html body .woocommerce.columns-4 .row.gy-40,
+  html body .woocommerce .products,
+  html body ul.products,
+  html body .row.gy-40 {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 20px !important;
+    margin: 0 !important;
+    width: 100% !important;
+  }
+  html body .woocommerce.columns-3 .row.gy-40 .product-wrapper,
+  html body .woocommerce.columns-4 .row.gy-40 .product-wrapper,
+  html body .woocommerce ul.products li.product,
+  html body ul.products li.product,
+  html body .product-wrapper {
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: 0 0 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+  }
+  html body .th-product-box,
+  html body .th-product {
+    padding: 16px !important;
+    border-radius: 16px !important;
+    width: 100% !important;
+  }
+  html body .th-product .product-img img,
+  html body .th-product-box .product-img img,
+  html body .woocommerce ul.products li.product img {
+    width: 100% !important;
+    height: auto !important;
+    max-height: 240px !important;
+    object-fit: cover !important;
+    border-radius: 14px !important;
+  }
+  html body .th-product .product-title,
+  html body .th-product-box .product-title,
+  html body .woocommerce-loop-product__title {
+    font-size: 17px !important;
+    min-height: auto !important;
+    line-height: 1.3 !important;
+    margin: 10px 0 6px !important;
+  }
+  html body .th-product .product-price,
+  html body .th-product-box .product-price,
+  html body .woocommerce .price {
+    font-size: 16px !important;
+    min-height: auto !important;
+    margin-bottom: 10px !important;
+  }
+  html body .th-product .btn-group,
+  html body .th-product-box .btn-group {
+    width: 100% !important;
+    margin-top: 10px !important;
+  }
+  html body .th-product .btn-group .button,
+  html body .th-product .btn-group .th-btn,
+  html body .th-product-box .btn-group a.button {
+    width: 100% !important;
+    text-align: center !important;
+    justify-content: center !important;
+    padding: 12px !important;
+    font-size: 14px !important;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 991px) {
+  html body .woocommerce.columns-3 .row.gy-40 .product-wrapper,
+  html body .woocommerce.columns-4 .row.gy-40 .product-wrapper {
+    width: 50% !important;
+    max-width: 50% !important;
+    flex: 0 0 50% !important;
+    padding: 8px !important;
+  }
+  html body .woocommerce ul.products {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 20px !important;
+  }
+  html body .woocommerce ul.products li.product {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+  }
+}
+
+/* Nested Tabs in Cloud Kitchen Menu */
+@media (max-width: 991px) {
+  .e-n-tabs-heading {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    gap: 8px !important;
+    padding: 6px 4px 16px 4px !important;
+    scrollbar-width: none !important;
+  }
+  .e-n-tabs-heading::-webkit-scrollbar {
+    display: none !important;
+  }
+  .e-n-tab-title {
+    flex: 0 0 auto !important;
+    white-space: nowrap !important;
+    padding: 10px 20px !important;
+    border-radius: 30px !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    margin: 0 !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   7. FEATURE CARDS, SERVICES, WHY CHOOSE US, ABOUT, PRICING & FAQ
+   -------------------------------------------------------------------------- */
+@media (max-width: 991px) {
+  /* Section Headings */
+  .sec-title,
+  h2.sec-title,
+  .title-area h2 {
+    font-size: clamp(22px, 5.5vw, 34px) !important;
+    line-height: 1.25 !important;
+    margin-bottom: 12px !important;
+  }
+  .sub-title {
+    font-size: 13px !important;
+    letter-spacing: 0.04em !important;
+  }
+  .title-area {
+    margin-bottom: 25px !important;
+  }
+
+  /* Feature cards */
+  .feature-card_wrapp,
+  .feature-card,
+  .choose-item {
+    width: 100% !important;
+    margin-bottom: 16px !important;
+  }
+  .feature-card {
+    padding: 24px 20px !important;
+    border-radius: 18px !important;
+  }
+  .feature-card .box-title {
+    font-size: 20px !important;
+    margin-bottom: 10px !important;
+  }
+  .feature-card .box-text {
+    font-size: 14px !important;
+    line-height: 1.55 !important;
+    margin-bottom: 16px !important;
+  }
+  .feature-card .th-btn {
+    width: 100% !important;
+    text-align: center !important;
+    justify-content: center !important;
+  }
+
+  /* About Box */
+  .img-box1, .img-box2, .img-box3 {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 16px !important;
+    width: 100% !important;
+    min-width: 0 !important;
+  }
+  .img-box1 .img1, .img-box2 .img1, .img-box3 .img1,
+  .img-box1 .img2, .img-box2 .img2, .img-box3 .img2 {
+    min-width: 0 !important;
+    width: 100% !important;
+  }
+  .img-box1 img, .img-box2 img, .img-box3 img {
+    width: 100% !important;
+    height: auto !important;
+    border-radius: 18px !important;
+  }
+  .about-wrapper {
+    position: static !important;
+    margin: 15px auto 0 !important;
+  }
+
+  /* Counter areas */
+  .counter-card2-wrap {
+    flex-direction: column !important;
+    gap: 20px !important;
+    padding: 25px 16px !important;
+    text-align: center !important;
+  }
+  .counter-card2 .box-number {
+    font-size: 44px !important;
+  }
+  .choose-counter .text {
+    min-width: 0 !important;
+    width: 100% !important;
+    font-size: clamp(26px, 6vw, 42px) !important;
+    line-height: 1.25 !important;
+  }
+  .choose-image .img1,
+  .cta-image5 {
+    min-width: 0 !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  /* Service slider & Service grid */
+  .service-card,
+  .service-grid2,
+  .project-card {
+    width: 100% !important;
+    margin-bottom: 16px !important;
+  }
+  .service-card .box-img img,
+  .project-card .box-img img {
+    width: 100% !important;
+    height: auto !important;
+    max-height: 240px !important;
+    object-fit: cover !important;
+    border-radius: 16px !important;
+  }
+
+  /* Pricing tables */
+  .elementor-widget-medovaprice .row > [class*="col-"] {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-bottom: 20px !important;
+  }
+  .price-box {
+    padding: 28px 18px !important;
+    border-radius: 20px !important;
+    width: 100% !important;
+  }
+  .price-box .box-title {
+    font-size: 21px !important;
+  }
+  .price-box .box-price {
+    font-size: 36px !important;
+    margin: 10px 0 14px !important;
+  }
+  .price-box .th-btn {
+    width: 100% !important;
+    text-align: center !important;
+    justify-content: center !important;
+  }
+
+  /* Testimonials */
+  .testiSlide1,
+  .testi-card {
+    padding: 22px 16px !important;
+    border-radius: 18px !important;
+    width: 100% !important;
+  }
+  .testi-card .box-text {
+    font-size: 14.5px !important;
+    line-height: 1.55 !important;
+  }
+  .testi-counter {
+    width: 100% !important;
+    margin-top: 20px !important;
+    padding: 22px 16px !important;
+    text-align: center !important;
+  }
+  .testi-counter .box-counter {
+    font-size: 40px !important;
+  }
+  .testi-counter .btn-group {
+    justify-content: center !important;
+  }
+
+  /* FAQ Accordion */
+  .accordion-card {
+    border-radius: 14px !important;
+    margin-bottom: 12px !important;
+  }
+  .accordion-button {
+    font-size: 15px !important;
+    padding: 14px 42px 14px 16px !important;
+    min-height: auto !important;
+    line-height: 1.35 !important;
+  }
+  .accordion-body {
+    padding: 0 !important;
+    margin: 0 16px 16px 16px !important;
+    font-size: 14px !important;
+    line-height: 1.5 !important;
+  }
+
+  /* App Download Banner */
+  .elementor-element-d39a980 {
+    padding: 40px 16px !important;
+  }
+  .elementor-element-d39a980 .title-area {
+    text-align: center !important;
+  }
+  .elementor-element-d39a980 .btn-group {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 12px !important;
+  }
+  .elementor-element-d39a980 .btn-group a img {
+    height: 44px !important;
+    width: auto !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   8. FOOTER RESPONSIVENESS
+   -------------------------------------------------------------------------- */
+@media (max-width: 991px) {
+  .footer-wrapper,
+  .elementor-1240 {
+    padding: 40px 16px 20px !important;
+  }
+  .elementor-1240 .elementor-element.elementor-element-6c5940f,
+  .footer-wrapper {
+    --padding-top: 40px !important;
+    padding-top: 40px !important;
+  }
+  .footer-wrapper .row > [class*="col-"],
+  .elementor-1240 .e-con-child,
+  .elementor-element-e7fe7bd,
+  .elementor-element-91733aa,
+  .elementor-element-8abf37a {
+    width: 100% !important;
+    max-width: 100% !important;
+    flex-direction: column !important;
+    text-align: center !important;
+    align-items: center !important;
+    margin-bottom: 22px !important;
+  }
+  .th-widget-about,
+  .widget_nav_menu,
+  .footer-widget {
+    text-align: center !important;
+    margin-bottom: 18px !important;
+  }
+  .footer-widget-about .footer-info {
+    justify-content: center !important;
+    text-align: center !important;
+  }
+  .elementor-element-b62e0ec .row {
+    flex-direction: column !important;
+    text-align: center !important;
+    gap: 14px !important;
+  }
+  .elementor-element-b62e0ec .footer-top-btn .btn-group {
+    justify-content: center !important;
+  }
+  .copyright-wrap,
+  .elementor-element-d9ffddc {
+    flex-direction: column !important;
+    text-align: center !important;
+    gap: 12px !important;
+    padding: 16px 0 !important;
+    align-items: center !important;
+  }
+  .copyright-text {
+    text-align: center !important;
+    font-size: 13.5px !important;
+    margin: 0 !important;
+  }
+  .elementor-element-1d083d5,
+  .copyright-wrap .social-links {
+    display: flex !important;
+    justify-content: center !important;
+  }
+  .heart-rate,
+  .heart-rate2 {
+    max-width: 100% !important;
+    overflow: hidden !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   9. FORMS, TABLES, CHECKOUT, CART, WISHLIST & POPUPS
+   -------------------------------------------------------------------------- */
+@media (max-width: 767px) {
+  /* Form Inputs (min 16px font to prevent iOS auto-zoom) */
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="tel"],
+  input[type="search"],
+  input[type="number"],
+  input[type="date"],
+  select,
+  textarea,
+  .form-control {
+    font-size: 16px !important;
+    min-height: 48px !important;
+    border-radius: 10px !important;
+    padding: 10px 14px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  textarea {
+    min-height: 100px !important;
+  }
+
+  /* Table horizontal scroll wrapper */
+  .woocommerce-cart-form,
+  .shop_table,
+  .wishlist_table,
+  table {
+    display: block !important;
+    width: 100% !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+
+  /* Cart Totals & Actions */
+  .cart-collaterals .cart_totals {
+    width: 100% !important;
+    float: none !important;
+  }
+  .woocommerce-cart .wc-proceed-to-checkout a.checkout-button {
+    width: 100% !important;
+    padding: 14px !important;
+    font-size: 16px !important;
+    text-align: center !important;
+  }
+
+  /* Checkout Layout */
+  .woocommerce-checkout .col2-set,
+  .woocommerce-checkout #order_review_heading,
+  .woocommerce-checkout #order_review {
+    width: 100% !important;
+    float: none !important;
+    margin-bottom: 24px !important;
+  }
+  .woocommerce-checkout .form-row {
+    width: 100% !important;
+    float: none !important;
+    margin: 0 0 16px 0 !important;
+  }
+  .woocommerce-checkout button#place_order {
+    width: 100% !important;
+    padding: 16px !important;
+    font-size: 16px !important;
+  }
+
+  /* Breadcrumbs */
+  .breadcumb-wrapper {
+    padding: 50px 16px !important;
+  }
+  .breadcumb-title {
+    font-size: clamp(24px, 6vw, 34px) !important;
+  }
+  .breadcumb-menu {
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 6px !important;
+  }
+
+  /* Toast & Modals */
+  .medova-static-toast {
+    left: 14px !important;
+    right: 14px !important;
+    bottom: 20px !important;
+    padding: 12px 18px !important;
+    font-size: 14px !important;
+  }
+  .mfp-content,
+  .woosw-popup-inner,
+  .woosq-popup {
+    max-width: 94vw !important;
+    margin: 15px auto !important;
+    padding: 15px !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   10. SCROLL TO TOP & TOUCH ENHANCEMENTS
+   -------------------------------------------------------------------------- */
+.scroll-top {
+  right: 16px !important;
+  bottom: 16px !important;
+  width: 44px !important;
+  height: 44px !important;
+  z-index: 99999 !important;
+}
+
+/* Mobile dropdown animation */
+@keyframes medovaSlideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
